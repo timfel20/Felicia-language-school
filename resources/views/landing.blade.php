@@ -4,7 +4,7 @@
   
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Arsha Bootstrap Template - Index</title>
+  <title>Felicia Lng School</title>
   <meta name="robots" content="noindex, nofollow">
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -97,7 +97,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
-          <img src="pelicanNoBg.png" class="img-fluid animated" alt="">
+          <img src="" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -286,12 +286,10 @@
               <img class="d-flex justify-content-center align-items-center p-0 m-0" style="width=110px; height:30vh" src="{{$product->image}}">
               <h4><a href="https://bootstrapmade.com/demo/templates/Arsha/">{{$product->title}}</a></h4>
               <p>{{$product->description}}</p>
-              <p>{{$product->people}}</p>
-              <p>{{$product->date}}</p>
               <div class="d-flex justify-content-center align-items-center">
               <button>Edit</button>
               <button>Apply</button>
-              <form action="/landing/{{$product->id}}" method ="POST">
+              <form action="landing/{{$product->id}}" method ="POST">
                 @method('DELETE')
                 @csrf
                 <button type="submit" class="btn btn-sm btn-outline-secondary">Delete</button> 
@@ -327,9 +325,7 @@
 
         <div class="section-title">
           <h2>Other Activities</h2>
-          <p>Apart from making sure your language skill is leveled up, we also organize fun activities like tours and excursions.
-            We also have speech therapists you can talk to about anything
-          </p>
+          <p>Apart from amking zz</p>
         </div>
 
         <ul id="portfolio-flters" class="d-flex justify-content-center aos-init" data-aos="fade-up" data-aos-delay="100">

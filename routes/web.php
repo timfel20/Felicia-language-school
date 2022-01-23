@@ -19,5 +19,5 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes();
 Route::get('/', [ProductController::class, 'index'])->name('landing');
-Route::delete('/landing/{id}', [ProductController::class, 'destroy'])->name('landing');
+Route::delete('landing{id}', [ProductController::class, 'destroy'])->name('landing');
 Route::get('/home', [ProductController::class, 'index'])->name('home');
