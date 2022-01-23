@@ -150,22 +150,12 @@
         </div>
 
         <div class="row content">
-          <div class="col-lg-6">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-            </ul>
-          </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              We are the FLC. We are a unique partnership of language trainers. 
+              We were born from the marriage of a speech therapist and a language trainer.
+              We dwell in the Beurs van Berlage, in the centre of Amsterdam. 
+              We are here to help you with your voice, your speech and your language. We are the Amsterdam Language Centre.
             </p>
             <a href="https://bootstrapmade.com/demo/templates/Arsha/#" class="btn-learn-more">Learn More</a>
           </div>
@@ -295,7 +285,8 @@
             <div class="icon-box">
               <img class="d-flex justify-content-center align-items-center p-0 m-0" style="width=110px; height:30vh" src="{{$product->image}}">
               <h4><a href="https://bootstrapmade.com/demo/templates/Arsha/">{{$product->title}}</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <p>{{$product->people}}</p>
+              <p>{{$product->date}}</p>
               <div class="d-flex justify-content-center align-items-center">
               <button>Edit</button>
               <button>Apply</button>
@@ -330,8 +321,10 @@
       <div class="container aos-init" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Other Activities</h2>
+          <p>Apart from making sure your language skill is leveled up, we also organize fun activities like tours and excursions.
+            We also have speech therapists you can talk to about anything
+          </p>
         </div>
 
         <ul id="portfolio-flters" class="d-flex justify-content-center aos-init" data-aos="fade-up" data-aos-delay="100">
