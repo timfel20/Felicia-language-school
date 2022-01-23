@@ -285,12 +285,17 @@
             <div class="icon-box">
               <img class="d-flex justify-content-center align-items-center p-0 m-0" style="width=110px; height:30vh" src="{{$product->image}}">
               <h4><a href="https://bootstrapmade.com/demo/templates/Arsha/">{{$product->title}}</a></h4>
+              <p>{{$product->description}}</p>
               <p>{{$product->people}}</p>
               <p>{{$product->date}}</p>
               <div class="d-flex justify-content-center align-items-center">
               <button>Edit</button>
               <button>Apply</button>
-              <button>Delete</button>
+              <form action="/landing/{{$product->id}}" method ="POST">
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="btn btn-sm btn-outline-secondary">Delete</button> 
+              </form>
               </div>
             </div>
           </div>
