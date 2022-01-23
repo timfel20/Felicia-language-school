@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 
 class ProductFactory extends Factory
 {
@@ -14,7 +15,8 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->company(),
+            'image' => $this->faker->imageUrl(),
         ];
     }
 }
