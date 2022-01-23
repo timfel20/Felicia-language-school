@@ -102,6 +102,7 @@
             @yield('landing')
             @yield('header')
             @yield('hero')
+            @yield('productform')
         </main>
     </div>
     <!-- Vendor JS Files -->
