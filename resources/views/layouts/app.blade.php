@@ -1,9 +1,20 @@
 <!doctype html>
 <!-- saved from url=(0047)https://bootstrapmade.com/demo/templates/Arsha/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+     <!-- Scripts -->
+     <script src="{{ asset('js/app.js') }}" defer></script>
+
+      <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <title>Felicia Lng School</title>
     <meta name="robots" content="noindex, nofollow">
     <meta content="" name="description">
@@ -41,7 +52,7 @@
     ======================================================== -->
   </head>
 
-<body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+ <body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -99,8 +110,8 @@
 
         <main class="py-4">
             @yield('content')
-            @yield('landing')
             @yield('header')
+            @yield('landing')
             @yield('hero')
             @yield('productform')
         </main>
@@ -136,5 +147,5 @@
             ga('create', 'UA-55234356-4', 'auto');
             ga('send', 'pageview');
     </script>
-</body>
-</html>
+ </body>
+ </html>

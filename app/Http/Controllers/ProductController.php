@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use Illuminate\Http\Request;
 
 /*The whole Auth user bs start from the fact that you gotta perform CRUD operation on your project
  to set an auth user, you need(), you gotta*/
@@ -24,7 +25,7 @@ class ProductController extends Controller
         the all() is basically returning new self of the model product. The products => products on 
         the second line means first'products is the name on the view i.e array name, second is the
         variable above'*/
-        return view('landing', ['products' => $products]);  
+        return view('landing', ['products' => $products]); 
     }
 
     /**
@@ -43,9 +44,20 @@ class ProductController extends Controller
      * @param  \App\Http\Requests\StoreProductRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProductRequest $request)
+    public function store(Request $request)
     {
-        //
+        /*$product = new Product;
+        $product-> title= $request->title;*/
+
+        $data = [
+            'title' => $request->title,
+            'image' => $request->image,
+            'description' => $request->description,
+            'people' => $request->people,
+            'date' => $request->date,
+        ];
+        Product::create($data);
+        return redirect(route('landing'));
     }
 
     /**

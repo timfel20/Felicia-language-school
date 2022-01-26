@@ -19,6 +19,8 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes();
 Route::get('/', [ProductController::class, 'index'])->name('landing');
-Route::get('/product/form', [ProductController::class, 'create'])->name('product.form');
-Route::delete('landing{id}', [ProductController::class, 'destroy'])->name('landing');
-Route::get('/home', [ProductController::class, 'index'])->name('home');
+Route::get('/product/form', [ProductController::class, 'create'])->name('productform');
+Route::post('/landing', [ProductController::class, 'store'])->name('product.store');
+Route::delete('/product/{id}', [ProductController::class, 'destroy'])->name('landing.destroy');
+Route::get('/', [HomeController::class, 'index'])->name('landing')->middleware('auth');
+
