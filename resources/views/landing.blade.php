@@ -1,5 +1,4 @@
 @extends('layouts.app')
-<x-header/>
 <x-hero/>
 @section('landing')
 <section id="services" class="services section-bg">

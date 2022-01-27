@@ -55,13 +55,6 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
@@ -84,23 +77,58 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+                               <!-- ======= Header ======= -->
+                            <header id="header" class="fixed-top">
+                                <div class="container d-flex align-items-center">
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                <h1 class="logo me-auto"><a href="https://bootstrapmade.com/demo/templates/Arsha/index.html">Arsha</a></h1>
+                                <!-- Uncomment below if you prefer to use an image logo -->
+                                <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                                <nav id="navbar" class="navbar">
+                                    <ul>
+                                    <li><a class="nav-link scrollto active" href="https://bootstrapmade.com/demo/templates/Arsha/#hero">Home</a></li>
+                                    <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#about">About</a></li>
+                                    <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#services">Services</a></li>
+                                    <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#team">Team</a></li>
+                                    <li class="dropdown"><a href="https://bootstrapmade.com/demo/templates/Arsha/#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                                        <ul>
+                                        <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Drop Down 1</a></li>
+                                        <li class="dropdown"><a href="https://bootstrapmade.com/demo/templates/Arsha/#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                                            <ul>
+                                            <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Deep Drop Down 1</a></li>
+                                            <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Deep Drop Down 2</a></li>
+                                            <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Deep Drop Down 3</a></li>
+                                            <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Deep Drop Down 4</a></li>
+                                            <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Deep Drop Down 5</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Drop Down 2</a></li>
+                                        <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Drop Down 3</a></li>
+                                        <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Drop Down 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#contact">Contact</a></li>
+                                    <li><a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        Hello {{ Auth::user()->name }}
+                                    </a></li>
+                                    <button class="text-dark"> 
+                                        <a class="dropdown-item" href="{{ route('logout')}}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </button>
+                                    </ul>
+                                    <i class="bi bi-list mobile-nav-toggle"></i>
+                                </nav><!-- .navbar -->
+
                                 </div>
-                            </li>
+                            </header><!-- End Header -->                               
                         @endguest
                     </ul>
                 </div>
