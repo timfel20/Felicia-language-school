@@ -19,6 +19,7 @@ class ProductFactory extends Factory
             'image' => $this->faker->imageUrl(),
             'description' => $this->faker->text(),
             'people' => $this->faker->numberBetween(0,10),
+            'user_id' => User::all()->random(),
             'date' => $this->faker->dateTimeBetween('now','+1 year'),
         ];
     }

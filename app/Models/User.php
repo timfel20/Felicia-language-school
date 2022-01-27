@@ -41,4 +41,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    public function loves()
+    {
+        return $this->belongsToMany(User::class, 'students')->withTimestamps();
+    }
+    public function applyToEvents(){
+        
+    }
+    
+    public function isAdmin()
+    {
+        if ($this->isAdmin) return true;
+    }
 }

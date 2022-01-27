@@ -34,7 +34,6 @@
   
     <!-- Vendor CSS Files -->
     <link href="../../../../events-css/aos.css" rel="stylesheet">
-    <link href="../../../../events-css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../../events-css/bootstrap-icons.css" rel="stylesheet">
     <link href="../../../../events-css/boxicons.min.css" rel="stylesheet">
     <link href="../../../../events-css/glightbox.min.css" rel="stylesheet">
@@ -108,44 +107,48 @@
             </div>
         </nav>
 
-        <main class="py-4">
             @yield('content')
-            @yield('header')
             @yield('landing')
-            @yield('hero')
             @yield('productform')
-        </main>
+            @yield('edtproduct')
+
     </div>
-    <!-- Vendor JS Files -->
-    <script src="../../../events-css/aos.js.descarga"></script>
-    <script src="../../../events-css/bootstrap.bundle.min.js.descarga"></script>
-    <script src="../../../events-css/glightbox.min.js.descarga"></script>
-    <script src="../../../events-css/isotope.pkgd.min.js.descarga"></script>
-    <script src="../../../events-css/swiper-bundle.min.js.descarga"></script>
-    <script src="../../../events-css/noframework.waypoints.js.descarga"></script>
-    <script src="../../../events-css/validate.js.descarga"></script>
+            <!-- Vendor JS Files -->
+            <script src="../../../events-css/aos.js.descarga"></script>
+            <script src="../../../events-css/bootstrap.bundle.min.js.descarga"></script>
+            <script src="../../../events-css/glightbox.min.js.descarga"></script>
+            <script src="../../../events-css/isotope.pkgd.min.js.descarga"></script>
+            <script src="../../../events-css/swiper-bundle.min.js.descarga"></script>
+            <script src="../../../events-css/noframework.waypoints.js.descarga"></script>
+            <script src="../../../events-css/validate.js.descarga"></script>
 
-    <!-- Template Main JS File -->
-    <script src="../../../events-css/main.js.descarga"></script>
-    <script src="{{asset('events-css/bootstrap.bundle.min.js.descarga')}}" ></script>
+            <!-- Template Main JS File -->
+            <script src="../../../events-css/main.js.descarga"></script>
+            <script src="{{asset('events-css/bootstrap.bundle.min.js.descarga')}}" ></script>
 
 
-    <script>if( window.self == window.top ) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-55234356-4', 'auto'); ga('send', 'pageview'); } </script>
-    <script async="" src="../../../events-css/Arsha Bootstrap Template Demo_files/analytics.js.descarga"></script><script src="../../../events-css/Arsha Bootstrap Template Demo_files/demo-2.8.0.js.descarga"></script>
-        <script>
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-            ga('create', 'UA-55234356-4', 'auto');
-            ga('send', 'pageview');
-    </script>
+            <script>
+                if( window.self == window.top ) { (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-55234356-4', 'auto'); ga('send', 'pageview'); }
+            </script>
+            <script 
+                async="" src="../../../events-css/Arsha Bootstrap Template Demo_files/analytics.js.descarga">
+            </script>
+            <script>
+                script src="../../../events-css/Arsha Bootstrap Template Demo_files/demo-2.8.0.js.descarga">
+            </script>
+           <script>
+                (function(i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-55234356-4', 'auto');
+          </script>
  </body>
- </html>
+</html>

@@ -14,6 +14,15 @@ class Product extends Model
         'image',
         'people',
         'date',
-        'description'
+        'description',
+        'user_id'
     ];
+
+
+    public function isInLove($productsId)
+    {
+        if ($this->loves()->find($productsId)) return true;
+        return false;
+    }
+
 }

@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 /*The whole Auth user bs start from the fact that you gotta perform CRUD operation on your project
  to set an auth user, you need(), you gotta*/
@@ -55,6 +56,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'people' => $request->people,
             'date' => $request->date,
+            'user_id'=>Auth::user()->id
         ];
         Product::create($data);
         return redirect(route('landing'));
@@ -77,9 +79,10 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
-        //
+       $productToedit = Product::findOrfail($id);
+      return view('edittest', ['product' => $productToedit]);
     }
 
     /**
@@ -89,9 +92,19 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProductRequest $request, Product $product)
+    public function update($id, Request $request)
     {
-        //
+        $productToupdate = Product::findOrfail($id);
+        $data = [
+            'title' => $request->title,
+            'image' => $request->image,
+            'description' => $request->description,
+            'people' => $request->people,
+            'date' => $request->date,
+            'user_id'=>Auth::user()->id
+        ];
+        Product::create($data);
+        return redirect(route('landing'));
     }
 
     /**

@@ -1,5 +1,4 @@
-@yield('layouts.app')
-@section('hero')
+@props(['hero'])
     <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
@@ -20,4 +19,3 @@
     </div>
 
   </section><!-- End Hero -->
-@endsection

@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->integer('people');
             $table->dateTime('date');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }
