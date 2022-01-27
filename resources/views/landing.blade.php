@@ -1,5 +1,7 @@
 @extends('layouts.app')
 <x-hero/>
+<x-beforeau/>
+<x-aboutus/>
 @section('landing')
 <section id="services" class="services section-bg">
   <div class="container aos-init" data-aos="fade-up">
@@ -33,5 +35,7 @@
       @endforeach
     </div>
   </div>
-</section><!-- End Services Section -
+</section>
+<!-- End Services Section-->
+<x-contact/>
 @endsection
