@@ -17,7 +17,7 @@ class ProductFactory extends Factory
         return [
             'title' => $this->faker->company(),
             'image' => $this->faker->imageUrl(),
-            'description' => $this->faker->text(),
+            'description' => $this->faker->sentence(8),
             'people' => $this->faker->numberBetween(0,10),
             'user_id' => User::all()->random(),
             'date' => $this->faker->dateTimeBetween('now','+1 year'),

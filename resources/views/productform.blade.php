@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('productform')
-  <form action = {{ route('product.store')}} method="POST">
+  <form class='form mt-7' action = {{ route('product.store')}} method="POST">
     @csrf
     <div class="form-group">
       <label for="title">Title</label>
@@ -25,4 +25,5 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+  <x-footer/>
 @endsection

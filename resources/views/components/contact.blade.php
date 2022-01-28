@@ -10,29 +10,10 @@
 
       <div class="row">
 
-        <div class="col-lg-5 d-flex align-items-stretch">
-          <div class="info">
-            <div class="address">
-              <i class="bi bi-geo-alt"></i>
-              <h4>Location:</h4>
-              <p>A108 Adam Street, New York, NY 535022</p>
-            </div>
-
-            <div class="email">
-              <i class="bi bi-envelope"></i>
-              <h4>Email:</h4>
-              <p>info@example.com</p>
-            </div>
-
-            <div class="phone">
-              <i class="bi bi-phone"></i>
-              <h4>Call:</h4>
-              <p>+1 5589 55488 55s</p>
-            </div>
-
-            <iframe src="./embed.html" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen=""></iframe>
+        <div class="col-lg-5 d-flex align-items-center">
+          <div class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+            <img src="../../../events-css/goldGlobeNoBg.png" class="img-fluid animated" alt="">
           </div>
-
         </div>
 
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">

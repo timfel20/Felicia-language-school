@@ -27,6 +27,6 @@ class DatabaseSeeder extends Seeder
             'isAdmin' => false,
         ])->create();
 
-        Product::factory(10)->create();
+        Product::factory(8)->create();
     }
 }

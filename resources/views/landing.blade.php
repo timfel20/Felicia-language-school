@@ -1,6 +1,5 @@
 @extends('layouts.app')
 <x-hero/>
-<x-beforeau/>
 <x-aboutus/>
 @section('landing')
 <section id="services" class="services section-bg">
@@ -37,5 +36,7 @@
   </div>
 </section>
 <!-- End Services Section-->
+<x-team/>
 <x-contact/>
+<x-footer_info/>
 @endsection
