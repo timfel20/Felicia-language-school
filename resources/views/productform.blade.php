@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('productform')
-  <form class='form mt-7' action = {{ route('product.store')}} method="POST">
+  <form class='form mt-5'styles ="margin-top:30% ; width:70%; height: 60vh" action = {{ route('product.store')}} method="POST">
     @csrf
     <div class="form-group">
       <label for="title">Title</label>
