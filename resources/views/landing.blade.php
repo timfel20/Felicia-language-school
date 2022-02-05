@@ -1,5 +1,4 @@
 @extends('layouts.app')
-<x-hero/>
 <x-aboutus/>
 @section('landing')
 <section id="services" class="services section-bg">
@@ -16,18 +15,21 @@
           <h4><a href="https://bootstrapmade.com/demo/templates/Arsha/">{{$product->title}}</a></h4>
           <p>{{$product->description}}</p>
           <div class="d-flex justify-content-center align-items-center">
-          <a href ="{{route('productform')}}">
-              <button>Create</button>
-          </a>
-          <a href ="{{route('products.edit', ['id'=>$product->id])}}">
-            <button>Edit</button>
-          </a>
-          <button>Apply</button>
-          <form action="product/{{$product->id}}" method ="POST">
-            @method('DELETE')
-            @csrf
-            <button type="submit" class="btn btn-sm btn-outline-secondary">Delete</button> 
-          </form>
+              <a href ="{{route('productform')}}">
+                  <button>Create</button>
+              </a>
+              <a href ="{{route('products.edit', ['id'=>$product->id])}}">
+                <button>Edit</button>
+              </a>
+              <form>
+                @csrf
+                <button action="{{ route('products.mine', ['id' => $product->id ]) }}" method="POST">Apply</button>
+              </form>
+              <form action="product/{{$product->id}}" method ="POST">
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="btn btn-sm btn-outline-secondary">Delete</button> 
+              </form>
           </div>
         </div>
       </div>

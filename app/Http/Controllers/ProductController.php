@@ -7,6 +7,8 @@ use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
 
 /*The whole Auth user bs start from the fact that you gotta perform CRUD operation on your project
  to set an auth user, you need(), you gotta*/
@@ -25,8 +27,14 @@ class ProductController extends Controller
         /* this is creating a variable $products saying it is equal to all() in the model `product`
         the all() is basically returning new self of the model product. The products => products on 
         the second line means first'products is the name on the view i.e array name, second is the
-        variable above'*/
-        return view('landing', ['products' => $products]); 
+        variable above'
+        Also, aa shorter way to do this is usng the method compact(), how do you do this, pass the 
+        function compact after the comma i.e where the [] is write compact('$products'))*/
+        return view(
+            'landing', ['products' => $products,
+            ]); 
+        
+
     }
 
     /**
@@ -118,5 +126,11 @@ class ProductController extends Controller
         $productToDelete=Product::findOrfail($id);
         $productToDelete->delete();
         return back();
+    }
+    public function myProducts($id){
+       $product=Product::find($id);
+       $user = Auth::user();
+       if($product->applyToProducts($user->id))redirect('myproducts');
+       redirect('myproducts');
     }
 }

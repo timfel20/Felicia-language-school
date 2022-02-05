@@ -15,9 +15,10 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
+            'showSlider'=> false,
             'title' => $this->faker->company(),
             'image' => $this->faker->imageUrl(),
-            'description' => $this->faker->sentence(8),
+            'description' => $this->faker->sentence(),
             'people' => $this->faker->numberBetween(0,10),
             'user_id' => User::all()->random(),
             'date' => $this->faker->dateTimeBetween('now','+1 year'),

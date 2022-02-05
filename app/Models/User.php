@@ -42,10 +42,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
-    public function loves()
-    {
-        return $this->belongsToMany(User::class, 'students')->withTimestamps();
-    }
+   
     public function applyToEvents(){
         
     }

@@ -3,10 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Product;
 use App\Models\Slide;
 
-class ProductSeeder extends Seeder
+class SlideSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +14,6 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        Product::factory()->create();
-        Slide::factory(6)->create();
+        Slide::factory(2)->create();
     }
 }

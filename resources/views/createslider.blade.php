@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('productform')
+@section('sliderform')
 <div class ='d-flex flex-column justify-content-center align-items-center' style='margin-top:135px; margin-bottom:105px; width:95%; height:60vh'>
-  <form action = {{ route('product.store')}} method="POST">
+  <form action = {{ route('slider.view')}} method="POST">
     @csrf
     <div class="form-group">
       <label for="title">Title</label>

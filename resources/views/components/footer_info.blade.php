@@ -6,13 +6,12 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Arsha</h3>
+            <h4>Company</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              About us <br>
+              Terms & Conditions<br>
+              Privacy Policy <br>
+              Wall of Heroes<br>
             </p>
           </div>
 
@@ -28,7 +27,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Our Courses</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="https://bootstrapmade.com/demo/templates/Arsha/#">Web Design</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://bootstrapmade.com/demo/templates/Arsha/#">Web Development</a></li>
@@ -39,7 +38,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
+            <h4>Follow Us</h4>
             <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
             <div class="social-links mt-3">
               <a href="https://bootstrapmade.com/demo/templates/Arsha/#" class="twitter"><i class="bx bxl-twitter"></i></a>

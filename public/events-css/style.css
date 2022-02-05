@@ -334,7 +334,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  background: url("happy21.png");
+  background: #47b2e4;
   background-size:100%;
 }
 #hero .container {
@@ -1605,4 +1605,10 @@ section {
   #footer .credits {
     padding-top: 4px;
   }
+}
+/*--------------------------------------------------------------
+# formcreate
+--------------------------------------------------------------*/
+.form-group{
+  width:440px;
 }

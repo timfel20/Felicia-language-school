@@ -22,6 +22,7 @@
   
     <!--bootstrap-->
     <link href="{{asset('events-css/bootstrap.min.css')}}" rel="stylesheet">
+    
     <!-- Favicons -->
     <link href="https://bootstrapmade.com/demo/templates/Arsha/assets/img/favicon.png" rel="icon">
     <link href="https://bootstrapmade.com/demo/templates/Arsha/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -136,10 +137,13 @@
             </nav>
             <div>
                 @yield('content')
+                @yield('hero')
                 @yield('landing')
                 @yield('restofthepage')
                 @yield('productform')
                 @yield('edtproduct')
+                @yield('sliderform')
+                @yield('slidereditform')
             </div>
 
         </div>
@@ -180,5 +184,7 @@
                 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
                 ga('create', 'UA-55234356-4', 'auto');
           </script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </body>
 </html>

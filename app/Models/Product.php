@@ -17,12 +17,26 @@ class Product extends Model
         'description',
         'user_id'
     ];
-
+    
+    public function loves()
+    {
+        return $this->belongsToMany(User::class, 'loves')->withTimestamps();
+    }
 
     public function isInLove($productsId)
     {
         if ($this->loves()->find($productsId)) return true;
         return false;
+    }
+    public function applyToProducts($userId){
+        $user = User::find($userId);
+        $this->loves()->attach($user);
+        return true;
+    }
+    public function unapplyToProducts($userId){
+        $user = User::find($userId);
+        $this->loves()->detach($user);
+        return true;
     }
 
 }
