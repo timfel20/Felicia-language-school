@@ -334,8 +334,6 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  background: #47b2e4;
-  background-size:100%;
 }
 #hero .container {
   padding-top: 72px;

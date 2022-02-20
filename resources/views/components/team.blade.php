@@ -1,5 +1,4 @@
 @props(['team'])
-<!-- ======= Team Section ======= -->
 <section id="team" class="team section-bg">
     <div class="container aos-init" data-aos="fade-up">
 
@@ -67,7 +66,7 @@
             <div class="member-info">
               <h4>Aimée Antoinette</h4>
               <span>French teacher</span>
-              <p>"«Il n’y a pas d’échec. Seulement des commentaires"</p>
+              <p>"Il n’y a pas d’échec. Seulement des commentaires"</p>
               <div class="social">
                 <a href="https://bootstrapmade.com/demo/templates/Arsha/"><i class="ri-twitter-fill"></i></a>
                 <a href="https://bootstrapmade.com/demo/templates/Arsha/"><i class="ri-facebook-fill"></i></a>
@@ -81,4 +80,4 @@
       </div>
 
     </div>
-  </section><!-- End Team Section -->
+  </section>

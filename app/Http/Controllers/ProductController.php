@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Slide;
 
 
 /*The whole Auth user bs start from the fact that you gotta perform CRUD operation on your project
@@ -29,12 +30,11 @@ class ProductController extends Controller
         the second line means first'products is the name on the view i.e array name, second is the
         variable above'
         Also, aa shorter way to do this is usng the method compact(), how do you do this, pass the 
-        function compact after the comma i.e where the [] is write compact('$products'))*/
+        function compact after the comma i.e where the [] is write compact('$products')*/
         return view(
-            'landing', ['products' => $products,
-            ]); 
-        
-
+            'landing', [
+                'products' => $products,
+        ]);
     }
 
     /**
@@ -127,10 +127,11 @@ class ProductController extends Controller
         $productToDelete->delete();
         return back();
     }
-    public function myProducts($id){
+    /* public function myProducts($id){
        $product=Product::find($id);
        $user = Auth::user();
-       if($product->applyToProducts($user->id))redirect('myproducts');
+       if(!$product->applyToProducts($user->id))redirect('myproducts');
        redirect('myproducts');
     }
+    */
 }

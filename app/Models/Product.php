@@ -15,12 +15,22 @@ class Product extends Model
         'people',
         'date',
         'description',
-        'user_id'
+        'user_id',
     ];
-    
+     //this is use for example if user wants to create various events. In this situation we won't
+     //need it beacuse we are making like a shopping cart kinda thing. i.e users can substibe to 
+     //products or add products to their personal page or cart. We'll need to create another eloquent
+     //relation which is (many)users belongsToMany products. Dont forget to write the table we've created
+     //just for their realtion in our case it's loves .
+     
     public function loves()
     {
         return $this->belongsToMany(User::class, 'loves')->withTimestamps();
+    }
+    
+    public function addList()
+    {
+        return $this->belongsToMany(User::class, 'MyList')->withTimestamps();
     }
 
     public function isInLove($productsId)
@@ -28,7 +38,7 @@ class Product extends Model
         if ($this->loves()->find($productsId)) return true;
         return false;
     }
-    public function applyToProducts($userId){
+    /* public function applyToProducts($userId){
         $user = User::find($userId);
         $this->loves()->attach($user);
         return true;
@@ -37,6 +47,6 @@ class Product extends Model
         $user = User::find($userId);
         $this->loves()->detach($user);
         return true;
-    }
+    } */
 
 }

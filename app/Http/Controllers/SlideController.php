@@ -22,7 +22,7 @@ class SlideController extends Controller
         the second line means first'products is the name on the view i.e array name, second is the
         variable above'*/
         return view(
-            'hero', ['slideproducts' => $slideproducts,
+            'landing', ['slideproducts' => $slideproducts,
             ]); 
     }
 

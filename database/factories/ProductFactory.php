@@ -15,7 +15,6 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'showSlider'=> false,
             'title' => $this->faker->company(),
             'image' => $this->faker->imageUrl(),
             'description' => $this->faker->sentence(),

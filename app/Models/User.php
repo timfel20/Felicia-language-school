@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Product;
 
 class User extends Authenticatable
 {
@@ -51,4 +53,31 @@ class User extends Authenticatable
     {
         if ($this->isAdmin) return true;
     }
+
+    public function myJoinedProducts(){
+        $this->belongsToMany(Product::class, 'loves');
+    }
+
+    public function myAddedProducts(){
+        $this->belongsToMany(Product::class, 'MyList');
+    }
+
+    public function hasApplied(Product $product){
+       return $this->myJoinedProducts->contains($product);
+    }
+
+    public $myProducts;
+
+
+   /*  public function mount()
+    {
+        $this->myproducts = Auth::user()->myJoinedEvents;
+
+        foreach ($this->myEvents as $event) {
+            $event->setUserTime();
+        }
+
+        return $this->myEvents;
+    } */
+
 }

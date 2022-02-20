@@ -43,6 +43,7 @@
   
     <!-- Template Main CSS File -->
     <link href="../../../../events-css/style.css" rel="stylesheet">
+    @livewireStyles
   
     <!-- =======================================================
     * Template Name: Arsha - v4.7.1
@@ -52,8 +53,8 @@
     ======================================================== -->
   </head>
 
-   <body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
-        <div id="app">
+ <body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+       <div id="app">
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="container">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -144,9 +145,9 @@
                 @yield('edtproduct')
                 @yield('sliderform')
                 @yield('slidereditform')
+                @yield('myproducts')      
             </div>
-
-        </div>
+      </div>
             <!-- Vendor JS Files -->
             <script src="../../../events-css/aos.js.descarga"></script>
             <script src="../../../events-css/bootstrap.bundle.min.js.descarga"></script>
@@ -186,5 +187,6 @@
           </script>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+          @livewireScripts
   </body>
 </html>

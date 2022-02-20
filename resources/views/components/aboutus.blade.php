@@ -1,5 +1,4 @@
 @props(['aboutus'])
- <!-- ======= About Us Section ======= -->
  <section id="about" class="about">
     <div class="container aos-init" data-aos="fade-up">
 
@@ -18,6 +17,5 @@
           <a href="https://bootstrapmade.com/demo/templates/Arsha/#" class="btn-learn-more">Learn More</a>
         </div>
       </div>
-
     </div>
-  </section><!-- End About Us Section -->
+  </section>

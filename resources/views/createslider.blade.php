@@ -29,3 +29,13 @@
 </div>
   <x-footer/>
 @endsection
+@if (!empty($slideproducts))
+                  <div class="carousel-item active">
+                    <img src="{{$slideproducts[0]->slideimage}}" style="object-fit:cover; object-position:100%; height:64vh" class="d-block w-100" alt="{{$slideproducts[0]->slidetitle}}">
+                  </div>
+              @endif
+              @for ($i = 1; $i < count($slideproducts); $i++)
+              <div class="carousel-item">
+                  <img src="{{$slideproducts[$i]->slideimage}}" class="d-block w-100" style="object-fit: cover; object-position:100%; height:64vh" alt="{{$slideproducts[$i]->slidetitle}}">
+              </div>
+              @endfor
