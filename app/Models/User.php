@@ -54,16 +54,18 @@ class User extends Authenticatable
         if ($this->isAdmin) return true;
     }
 
-    public function myJoinedProducts(){
+    /* public function myJoinedProducts(){
         $this->belongsToMany(Product::class, 'loves');
-    }
+    } */
 
+    //eloquent relationship between user and product
     public function myAddedProducts(){
-        $this->belongsToMany(Product::class, 'MyList');
+       return $this->belongsToMany(Product::class, 'MyList');
     }
 
+    //to know if you' ve actually subscribed i.e if user contains products
     public function hasApplied(Product $product){
-       return $this->myJoinedProducts->contains($product);
+       return $this->myAddedProducts->contains($product);
     }
 
     public $myProducts;

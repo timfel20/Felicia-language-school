@@ -23,20 +23,21 @@ class Product extends Model
      //relation which is (many)users belongsToMany products. Dont forget to write the table we've created
      //just for their realtion in our case it's loves .
      
-    public function loves()
+   /*  public function loves()
     {
         return $this->belongsToMany(User::class, 'loves')->withTimestamps();
-    }
+    } */
     
-    public function addList()
+    public function loves()
     {
         return $this->belongsToMany(User::class, 'MyList')->withTimestamps();
     }
 
-    public function isInLove($productsId)
+    public function isInLove($userid)
     {
-        if ($this->loves()->find($productsId)) return true;
-        return false;
+       $user=User::find($userid);
+       $this->loves()->attach($user);
+       return true;
     }
     /* public function applyToProducts($userId){
         $user = User::find($userId);

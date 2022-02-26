@@ -1,7 +1,7 @@
 @extends('layouts.app')
+@section('landing')
 <x-hero/>
 <x-aboutus/>
-@section('landing')
     <section id="services" class="services section-bg">
       <div class="container aos-init" data-aos="fade-up">
         <div class="section-title">
@@ -22,7 +22,7 @@
                   <a href ="{{route('products.edit', ['id'=>$product->id])}}">
                     <button>Edit</button>
                   </a>
-                  <form action="{{url('/mine', $product->id)}}"  method="POST" >
+                  <form action="{{ route('myproducts', ['id' => $product->id ]) }}"  method="POST" >
                     @csrf
                     <button type="submit">Apply</button>
                   </form> 

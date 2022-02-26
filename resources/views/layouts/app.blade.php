@@ -31,7 +31,9 @@
     <link href="../../../../events-css/css" rel="stylesheet">
   
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
+       font-awesome/5.8.2/css/all.min.css"/>
   
     <!-- Vendor CSS Files -->
     <link href="../../../../events-css/aos.css" rel="stylesheet">
@@ -55,7 +57,7 @@
 
  <body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
        <div id="app">
-            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <nav class="navbar-reg navbar-expand-md navbar-light shadow-sm" style="height:88px; background-color:rgba(40, 58, 90, 0.9)">
                 <div class="container">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
@@ -67,6 +69,7 @@
                         <ul class="navbar-nav ms-auto">
                             <!-- Authentication Links -->
                             @guest
+                            <div class="d-flex justify-content-center align-items-center mt-4">
                                 @if (Route::has('login'))
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -78,6 +81,7 @@
                                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
                                 @endif
+                            </div>
                             @else
                                 <!-- ======= Header ======= -->
                                 <header id="header" class="fixed-top">
@@ -89,44 +93,27 @@
 
                                     <nav id="navbar" class="navbar">
                                         <ul>
-                                        <li><a class="nav-link scrollto active" href="https://bootstrapmade.com/demo/templates/Arsha/#hero">Home</a></li>
-                                        <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#about">About</a></li>
-                                        <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#services">Services</a></li>
-                                        <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#team">Team</a></li>
-                                        <li class="dropdown"><a href="https://bootstrapmade.com/demo/templates/Arsha/#"><span>Drop Down</span> <i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                            <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Drop Down 1</a></li>
-                                            <li class="dropdown"><a href="https://bootstrapmade.com/demo/templates/Arsha/#"><span>Deep Drop Down</span> <i class="fas fa-chevron-right"></i></i></a>
-                                                <ul>
-                                                <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Deep Drop Down 1</a></li>
-                                                <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Deep Drop Down 2</a></li>
-                                                <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Deep Drop Down 3</a></li>
-                                                <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Deep Drop Down 4</a></li>
-                                                <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Deep Drop Down 5</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Drop Down 2</a></li>
-                                            <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Drop Down 3</a></li>
-                                            <li><a href="https://bootstrapmade.com/demo/templates/Arsha/#">Drop Down 4</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#contact">Contact</a></li>
-                                        <li><a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            Hello {{ Auth::user()->name }}
-                                        </a></li>
-                                        <button class="text-dark"> 
-                                            <a class="dropdown-item" href="{{ route('logout')}}"
-                                            onclick="event.preventDefault();
-                                                            document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
-                                            </a>
+                                            <li><a class="nav-link scrollto active" href="https://bootstrapmade.com/demo/templates/Arsha/#hero">Home</a></li>
+                                            <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#about">About</a></li>
+                                            <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#services">Services</a></li>
+                                            <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#team">Team</a></li>
+                                            <li><a class="nav-link scrollto" href="https://bootstrapmade.com/demo/templates/Arsha/#contact">Contact</a></li>
+                                            <li><a id="navbarDropdown" class="nav-link scrollto" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                Logged in as {{ Auth::user()->name }}
+                                            </a></li>
+                                            <li class="nav-link scrollto"> 
+                                                <a class="dropdown-item" href="{{ route('logout')}}"
+                                                onclick="event.preventDefault();
+                                                                document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
 
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                @csrf
-                                            </form>
-                                        </button>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </li>
                                         </ul>
-                                        <i class="bi bi-list mobile-nav-toggle"></i>
+                                        {{-- <i class="bi bi-list mobile-nav-toggle"></i> --}}
                                     </nav><!-- .navbar -->
 
                                     </div>
@@ -138,7 +125,6 @@
             </nav>
             <div>
                 @yield('content')
-                @yield('hero')
                 @yield('landing')
                 @yield('restofthepage')
                 @yield('productform')

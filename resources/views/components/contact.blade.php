@@ -5,18 +5,11 @@
 
       <div class="section-title">
         <h2>Contact</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p></p>Let us know if you're interested in some of out courses and want to learn with us
       </div>
 
-      <div class="row">
-
-        <div class="col-lg-5 d-flex align-items-center">
-          <div class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
-            <img src="../../../events-css/goldGlobeNoBg.png" class="img-fluid animated" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-center">
           <form action="https://bootstrapmade.com/demo/templates/Arsha/forms/contact.php" method="post" role="form" class="php-email-form">
             <div class="row">
               <div class="form-group col-md-6">

@@ -11,7 +11,7 @@
 
         <div class="col-lg-6">
           <div class="member d-flex align-items-start aos-init" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pic"><img src="../../../events-css/team-1.jpg" class="img-fluid" alt=""></div>
+            <div class="pic"><img src="../../../events-css/img/teacher-1.jpg" class="img-fluid" alt=""></div>
             <div class="member-info">
               <h4>Daniel Izod</h4>
               <span>German teacher</span>
@@ -28,7 +28,7 @@
 
         <div class="col-lg-6 mt-4 mt-lg-0">
           <div class="member d-flex align-items-start aos-init" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pic"><img src="../../../events-css/team-2.jpg" class="img-fluid" alt=""></div>
+            <div class="pic"><img src="../../../events-css/img/teacher-2.jpg" class="img-fluid" alt=""></div>
             <div class="member-info">
               <h4>Rhoda Owaz</h4>
               <span>English teacher</span>
@@ -45,7 +45,7 @@
 
         <div class="col-lg-6 mt-4">
           <div class="member d-flex align-items-start aos-init" data-aos="zoom-in" data-aos-delay="300">
-            <div class="pic"><img src="../../../events-css/team-3.jpg" class="img-fluid" alt=""></div>
+            <div class="pic"><img src="../../../events-css/img/teacher-3.jpg" class="img-fluid" alt=""></div>
             <div class="member-info">
               <h4>Spanish teacher</h4>
               <span>Rodriguez Alejandro</span>
@@ -62,13 +62,13 @@
 
         <div class="col-lg-6 mt-4">
           <div class="member d-flex align-items-start aos-init" data-aos="zoom-in" data-aos-delay="400">
-            <div class="pic"><img src="../../../events-css/team-4.jpg" class="img-fluid" alt=""></div>
+            <div class="pic"><img src="../../../events-css/img/teacher-4.jpg" class="img-fluid" alt=""></div>
             <div class="member-info">
               <h4>Aimée Antoinette</h4>
               <span>French teacher</span>
               <p>"Il n’y a pas d’échec. Seulement des commentaires"</p>
               <div class="social">
-                <a href="https://bootstrapmade.com/demo/templates/Arsha/"><i class="ri-twitter-fill"></i></a>
+                <a href="https://bootstrapmade.com/demo/templates/Arsha/"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://bootstrapmade.com/demo/templates/Arsha/"><i class="ri-facebook-fill"></i></a>
                 <a href="https://bootstrapmade.com/demo/templates/Arsha/"><i class="ri-instagram-fill"></i></a>
                 <a href="https://bootstrapmade.com/demo/templates/Arsha/"> <i class="ri-linkedin-box-fill"></i> </a>

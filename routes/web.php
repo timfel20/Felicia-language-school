@@ -40,6 +40,8 @@ Route::put('/update/slide/{id}', [SlideController::class, 'update'])->name('slid
 
 Route::post('/mine/{id}', [MyListController::class, 'addToList'])->name('myproducts');
 
+Route::get('/mine', [MyListController::class, 'index'])->name('myproducts');
+
 Route::delete('/product/{id}', [ProductController::class, 'destroy'])->name('landing.destroy');
 
 /* Route::get('/products/mine', [HomeController::class, 'index'])->name('landing'); */
